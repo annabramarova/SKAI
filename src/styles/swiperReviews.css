@@ -1,0 +1,161 @@
+.swiper-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 517px;
+  max-height: 350px;
+  border-radius: 12px;
+  padding: 32px 24px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.42;
+
+  background-color: var(--neutral-black-800);
+}
+
+@media (max-width: 450px) {
+  .swiper-slide {
+    padding: 24px;
+    min-height: 478px;
+  }
+}
+
+.reviewText {
+  font-weight: 300;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.42;
+  color: var(--neutral-gray-300);
+}
+
+.userPhoto {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.userInfo h4 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.48;
+  color: var(--neutral-gray-200);
+}
+
+.userInfo p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.42;
+  color: var(--neutral-gray-400);
+}
+
+.profileContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.dateRatingContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.rating {
+  margin: 10px 0;
+  display: flex;
+}
+
+.star {
+  width: 17px;
+  height: 16px;
+  margin: 0 2px;
+}
+
+.reviewDate {
+  font-size: 0.8em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Навигация */
+.swiper-navigation {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 32px;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  left: 36px;
+}
+
+.swiper-button-next img,
+.swiper-button-prev img {
+  width: 100%;
+  height: 100%;
+}
+
+.sliderTitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.32;
+  text-transform: uppercase;
+
+  margin-bottom: 75px;
+
+  color: var(--neutral-white);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}

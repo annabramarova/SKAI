@@ -1,0 +1,39 @@
+.hero {
+  position: relative;
+  display: flex;
+  height: 610px;
+  align-items: center;
+}
+
+.heroTitle {
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--neutral-white);
+}
+
+.heroTitle > *:not(:first-child) {
+  margin-left: 217px;
+}
+
+/* Медиа-запрос для экранов меньше 768px */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 48px;
+    line-height: 1.24;
+  }
+
+  .heroTitle > *:not(:first-child) {
+    margin-left: 0;
+  }
+}
+
+.heroBackground {
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

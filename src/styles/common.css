@@ -1,0 +1,104 @@
+:root {
+  --neutral-white: #fbfdff;
+  --neutral-background: #0f1113;
+  --neutral-black-800: #171b1f;
+  --neutral-black-700: #181c21;
+  --neutral-black-600: #22262a;
+  --neutral-black-500: #2d2f33;
+  --neutral-gray-400: #82858b;
+  --neutral-gray-300: #b3b7bd;
+  --neutral-gray-200: #d2d3d7;
+  --neutral-blue-100: #d6e9ff;
+  --accent-blue: #4285f4;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../fonts/Outfit-Light.woff2") format("woff2"),
+    url("../fonts/Outfit-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../fonts/Outfit-Medium.woff2") format("woff2"),
+    url("../fonts/Outfit-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../fonts/Outfit-SemiBold.woff2") format("woff2"),
+    url("../fonts/Outfit-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: var(--neutral-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  all: unset;
+  display: inline;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 60px;
+  padding: 14px 28px;
+  width: 151px;
+  height: 48px;
+  padding: 20px 10px;
+
+  border: none;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.15;
+  text-transform: lowercase;
+
+  color: var(--neutral-white);
+  background-color: var(--accent-blue);
+}
+
+.button:hover {
+  background-color: #357ae8;
+}

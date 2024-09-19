@@ -1,0 +1,60 @@
+.footer {
+  background-color: #111; /* Темный фон */
+  color: #fff; /* Белый текст */
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Контейнер для колонок */
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Колонки внутри футера */
+.footerColumn {
+  flex: 1;
+  margin: 0 20px;
+}
+
+/* Заголовки колонок */
+.footerColumn h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Контактные данные */
+.contactDetails a {
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Социальные ссылки */
+.socialLinks a {
+  display: block;
+  color: #fff;
+}
+
+.socialLinks a:hover,
+.contactDetails a:hover {
+  color: var(--accent-blue);
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerColumn {
+    margin-bottom: 30px;
+  }
+}
