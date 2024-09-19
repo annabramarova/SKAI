@@ -1,79 +1,55 @@
-Review Slider Component
-This project is a fully functional review slider component built using Swiper.js. It displays user reviews with a flexible design and works across different screen sizes. The component includes navigation buttons and dynamically loads user reviews into the slider.
+# Review Slider
 
-Features
-Responsive design with 2 slides per view on larger screens and 1 slide per view on mobile devices.
-Smooth navigation with looping and custom navigation buttons.
-Dynamically loaded reviews from a JSON-like array.
-Displaying user information such as name, position, date, and rating (fixed 5-star rating).
-Integration of SVG icons for stars and navigation arrows.
-Prerequisites
-Make sure you have the following installed on your system:
+A responsive review slider component built with Swiper.js. It showcases user reviews in a stylish and interactive carousel format.
 
-Node.js and npm (for installing dependencies)
-Webpack (for bundling and compiling assets)
-Getting Started
+## Features
 
-1. Clone the Repository
-   bash
-   Копировать код
-   git clone https://github.com/your-username/review-slider.git
-   cd review-slider
-2. Install Dependencies
-   Use npm to install the required dependencies:
+- Displays user reviews in a carousel.
+- Shows 2 reviews at a time on tablets and desktops, and 1 review on mobile devices.
+- Customizable navigation buttons.
 
-bash
-Копировать код
-npm install 3. Project Structure
-The project is structured as follows:
+## Prerequisites
 
-bash
-Копировать код
-/src
-/images # Contains user images, star icon, and navigation arrows.
-/styles # Contains CSS styles for Swiper.js and custom components.
-/js # Contains the Swiper.js integration code.
-sliderReviews.js # Main JS file for creating and configuring the review slider.
+Make sure you have [Node.js](https://nodejs.org/) installed. You can check if it's installed and its version by running:
 
-/dist
-/css # Compiled CSS files.
-/js # Compiled JS files.
-/images # Compiled images and assets. 4. Running the Project
-To run the project in development mode:
+```bash
+node -v
+```
 
-bash
-Копировать код
-npm run start
-This will compile the assets and start a local development server.
+## Installation
 
-5. Building for Production
-   To build the project for production:
+1. **Clone the repository:**
 
-bash
-Копировать код
-npm run build
-This will compile the JavaScript and CSS files into the /dist folder.
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
-6. Using the Review Slider Component
-   To create and render the review slider, use the createReviewSlider function from sliderReviews.js in your main application file.
+2. **Install dependencies:**
 
-js
-Копировать код
-import { createReviewSlider } from "./js/sliderReviews";
+   Install the required npm packages:
 
-document.body.appendChild(createReviewSlider());
-The createReviewSlider function dynamically builds the slider with all the necessary components.
+   ```bash
+   npm install
+   ```
 
-7. Customization
-   You can customize the following aspects:
+   This will install the following dependencies:
 
-Review Content: Modify the reviews array in the sliderReviews.js file to add or change the review data.
-CSS Styling: Modify the styles in swiperReviews.css for layout changes, fonts, and colors.
-SVG Icons: Replace the star and navigation icons in the /src/images/ folder with custom SVG files if necessary.
-Dependencies
-Swiper.js for the review slider functionality.
-Webpack for bundling the assets.
-License
-This project is licensed under the MIT License.
+   - `swiper`: For the carousel functionality.
+   - Other dependencies defined in `package.json`.
 
-Developed by Anna Bramarova.
+3. **Add assets:**
+
+   Place your SVG icons and images in the `images` directory. Ensure that the paths to these assets in your JavaScript and CSS files are correct.
+
+## Usage
+
+1. **Build and Start the Development Server:**
+
+   You can use a tool like `webpack` to bundle your assets and run a development server. If you have a `webpack` configuration file (`webpack.config.js`), you can start the server with:
+
+   ```bash
+   npm start
+   ```
+
+   This command will build your project and serve it on a local server. The default URL is usually `http://localhost:8080`, but check your `webpack` configuration for the exact URL.
