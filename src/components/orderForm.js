@@ -87,7 +87,7 @@ export function createOrderForm() {
   // Function to open map modal
   function openMapModal(coordinates) {
     const mapIframe = document.getElementById("mapIframe");
-    mapIframe.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBj6J12DcNEqPTQ7cmvLR-WI33erAjdmXs&q=${coordinates}`;
+    mapIframe.src = `https://www.google.com/maps/embed/v1/place?${coordinates}`;
     mapModal.style.display = "block";
   }
 

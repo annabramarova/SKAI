@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Letters</title>
+    <style>
+        #textContainer {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            position: relative;
+            width: max-content;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        #textContainer span {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            cursor: grab;
+        }
+        #textContainer span:active {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+    <div id="textContainer"></div>
+
+    <script>
+        // Функція для створення тексту
+        function createDraggableText(text) {
+            const container = document.getElementById("textContainer");
+
+            text.split('').forEach((char, index) => {
+                const span = document.createElement("span");
+                span.textContent = char;
+                span.draggable = true;
+                span.dataset.index = index;
+                container.appendChild(span);
+
+                // Додавання обробника події перетягування
+                span.addEventListener('dragstart', handleDragStart);
+                span.addEventListener('dragend', handleDragEnd);
+            });
+        }
+
+        function handleDragStart(event) {
+            event.dataTransfer.setData('text/plain', event.target.dataset.index);
+            event.target.style.opacity = '0.5';
+        }
+
+        function handleDragEnd(event) {
+            event.target.style.opacity = '1';
+        }
+
+        // Ініціалізація
+        createDraggableText("Hello, world!");
+
+        // Додати обробники для можливого оброблення дроп-зони
+        const container = document.getElementById("textContainer");
+        container.addEventListener('dragover', (event) => event.preventDefault());
+        container.addEventListener('drop', (event) => {
+            event.preventDefault();
+            const index = event.dataTransfer.getData('text/plain');
+            const draggedElement = container.querySelector(`span[data-index="${index}"]`);
+            const targetIndex = [...container.children].indexOf(event.target.closest('span'));
+
+            if (draggedElement && draggedElement !== event.target.closest('span')) {
+                container.insertBefore(draggedElement, container.children[targetIndex]);
+            }
+        });
+    </script>
+</body>
+</html>
